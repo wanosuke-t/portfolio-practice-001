@@ -1,0 +1,8 @@
+@use "../global" as global;
+
+.c-inner {
+  padding-inline: global.rem(15px);
+
+  @include global.mq(pc) {
+  }
+}

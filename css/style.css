@@ -146,6 +146,9 @@ body {
   }
 }
 
+.c-inner {
+  padding-inline: 0.9375rem;
+}
 .c-btn-action {
   display: inline-block;
   background: #ff8b71;
@@ -270,7 +273,6 @@ body {
   text-align: center;
   margin-inline: auto;
   width: 100%;
-  max-width: 22.5rem;
   padding-top: 1.875rem;
   padding-bottom: 3.875rem;
   position: relative;
