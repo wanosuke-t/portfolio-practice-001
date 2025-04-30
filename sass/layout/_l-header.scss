@@ -28,7 +28,7 @@
   align-items: center;
 
   @include global.mq(pc) {
-    padding-inline: 45px 34px;
+    padding-inline: global.rem(45px) global.rem(34px);
     max-width: global.$width-base-pc;
   }
 }

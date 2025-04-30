@@ -10,6 +10,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: color 0.3s ease, background-color 0.3s ease;
+
+  &:hover {
+    @include global.mq(pc) {
+      color: global.$color-accent-1;
+      background: global.$color-base-1;
+    }
+  }
 
   &--header {
     width: global.rem(128px);
