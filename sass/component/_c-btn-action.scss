@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 
   &:hover {
     @include global.mq(pc) {
@@ -39,7 +39,8 @@
       display: inline-block;
       width: global.rem(9px);
       height: global.rem(15px);
-      background: url("../img/common/arrow-btn.svg") no-repeat center center / contain;
+      background: url("../img/common/btn-arrow-sp.svg") no-repeat center center /
+        contain;
 
       @include global.mq(pc) {
         display: none;
@@ -59,11 +60,47 @@
     font-size: global.rem(14px);
     font-weight: 700;
     line-height: 1.2;
-    padding-top: global.rem(3px);
+    padding-top: global.rem(5px);
+
+    @include global.mq(pc) {
+      width: global.rem(152px);
+      height: global.rem(152px);
+      flex-direction: row;
+      font-size: global.rem(18px);
+      font-weight: 400;
+      line-height: 1.2;
+      padding-top: 0;
+      padding-right: global.rem(6px);
+    }
+
+    &:hover {
+      &::after {
+        @include global.mq(pc) {
+          background: url("../img/common/btn-arrow-pc-hover.svg") no-repeat
+            center center / contain;
+        }
+      }
+    }
 
     span {
       font-size: global.rem(14px);
       font-weight: 400;
+
+      @include global.mq(pc) {
+        font-size: global.rem(18px);
+      }
+    }
+
+    &:after {
+      @include global.mq(pc) {
+        content: "";
+        display: inline-block;
+        width: global.rem(10.933px);
+        height: global.rem(20.364px);
+        background: url("../img/common/btn-arrow-pc.svg") no-repeat center
+          center / contain;
+        margin-left: global.rem(11.8px);
+      }
     }
   }
 }
