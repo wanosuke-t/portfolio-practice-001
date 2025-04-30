@@ -1,0 +1,80 @@
+@use "../global" as global;
+
+.c-cta-card {
+  background: url("../img/cta-card/cta-card-bg-sp.jpg") no-repeat center center /
+    cover;
+  // background: url("../img/cta-card/cta-card-bg-sp.jpg") lightgray 50% / cover
+  //     no-repeat,
+  // global.$color-base-1;
+  padding-block: global.rem(24px);
+
+  @include global.mq(pc) {
+    background: url("../img/cta-card/cta-card-bg-pc.jpg") no-repeat center
+      center / cover;
+  }
+}
+
+.c-cta-card__box {
+  text-align: center;
+  margin-inline: global.rem(13px);
+  padding-top: global.rem(30px);
+  padding-bottom: global.rem(62px);
+  position: relative;
+
+  border-radius: global.rem(16px);
+  background: linear-gradient(
+      180deg,
+      rgba(205, 251, 243, 0.7) 0%,
+      rgba(205, 230, 250, 0) 100%
+    ),
+    url("../img/cta-card/cta-card-box-sp.png") lightgray 50% / cover no-repeat;
+  box-shadow: 0 0 4px #dae4ee;
+}
+
+.c-cta-card__lead {
+  font-weight: 700;
+  line-height: 1.2;
+  padding-left: global.rem(49.32px);
+}
+
+.c-cta-card__highlight {
+  display: flex;
+  justify-content: center;
+  gap: global.rem(2px);
+  margin-top: global.rem(6px);
+}
+
+.c-cta-card__label {
+  margin-top: global.rem(16.1px);
+  text-shadow: 0px 2.132px 2.132px rgba(255, 255, 255, 0.25);
+  font-size: global.rem(19px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: global.rem(1.9px);
+}
+
+.c-cta-card__free {
+  text-shadow: 0px 2.132px 2.132px rgba(255, 255, 255, 0.25);
+  font-size: global.rem(40px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.c-cta-card__sub {
+  font-size: global.rem(15px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: global.rem(6px);
+  margin-top: global.rem(12px);
+}
+
+.c-cta-card__note {
+  position: absolute;
+  width: calc(100% - global.rem(4px));
+  width: 100%;
+  background: global.$color-base-1;
+}
+
+.c-cta-card__btn {
+  position: absolute;
+}

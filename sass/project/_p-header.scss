@@ -1,11 +1,13 @@
 @use "../global" as global;
 
 .p-header__logo {
-  display: block;
-  width: global.rem(151px);
+  a {
+    display: block;
+    width: global.rem(151px);
 
-  @include global.mq(pc) {
-    width: global.rem(187px);
+    @include global.mq(pc) {
+      width: global.rem(187px);
+    }
   }
 }
 .p-header__nav {
