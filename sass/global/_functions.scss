@@ -1,0 +1,16 @@
+@use "./variables" as global;
+
+// PCカンプ基準でvw計算
+@function vw-pc($px) {
+  @return ($px / global.$width-base-pc) * 100vw;
+}
+
+// SPカンプ基準でvw計算
+@function vw-sp($px) {
+  @return ($px / global.$width-base-sp) * 100vw;
+}
+
+// フォントサイズベース基準でrem計算
+@function rem($px) {
+  @return ($px / global.$fz-base) * 1rem;
+}

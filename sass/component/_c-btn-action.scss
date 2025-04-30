@@ -1,0 +1,48 @@
+@use "../global" as global;
+
+.c-btn-action {
+  display: inline-block;
+  background: global.$color-accent-1;
+  box-shadow: 0 0 global.rem(3px) 0 rgba(83, 46, 37, 0.25);
+  color: global.$color-text-white;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--header {
+    width: global.rem(128px);
+    padding-block: global.rem(8.5px);
+    padding-left: global.rem(8px);
+    border-radius: global.rem(32px);
+    gap: global.rem(7.49px);
+
+    @include global.mq(pc) {
+      width: global.rem(160px);
+      height: global.rem(56px);
+      padding-left: global.rem(3px);
+      line-height: 1.2; /* 19.2px */
+      letter-spacing: global.rem(3.2px);
+    }
+
+    &:after {
+      content: "";
+      display: inline-block;
+      width: global.rem(9px);
+      height: global.rem(15px);
+      background: url("../img/arrow-btn.svg") no-repeat center center / contain;
+
+      @include global.mq(pc) {
+        display: none;
+      }
+    }
+  }
+
+  &--drawer {
+  }
+
+  &--circle {
+    box-shadow: none;
+  }
+}

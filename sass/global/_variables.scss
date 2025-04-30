@@ -1,0 +1,61 @@
+// フォント
+$ff-jp-sans: "Noto Sans JP", sans-serif; // 全体の基本
+$ff-jp-serif: "Noto Serif JP", serif; // 読み物・強調
+$ff-jp-handwriting: "Yomogi", cursive; // アクセント・遊び
+$ff-en-sans: "Lato", sans-serif; // 英字表示用
+
+$fz-base: 16px; // ベースフォントサイズ
+$fw-base: 400; // ベースフォントウェイト
+$lh-base: 1.7; // ベース行間
+
+// 色
+$color-text-white: #ffffff;
+$color-text-black: #333333;
+$color-text-gray: #6c6e6f;
+
+$color-base-1: #ffffff;
+$color-base-2: #f4fbfd;
+$color-accent-1: #ff8b71;
+$color-accent-2: #82bfed;
+$color-accent-3: #c6ecec;
+$color-accent-4: linear-gradient(
+  177deg,
+  #50bfcb -29.45%,
+  rgba(80, 191, 203, 0.42) 127.88%
+);
+
+// レイアウト
+$width-base-sp: 390px; // スマホサイズ
+$width-base-pc: 1440px; // PCサイズ
+$inner-width-sp: 360px; // スマホインナー幅サイズ
+$inner-width-pc: 992px; // PCインナー幅サイズ
+
+$height-header-sp: 60px; // スマホヘッダーサイズ
+$height-header-pc: 104px; // PCヘッダーサイズ
+
+// ブレークポイント
+$breakpoints: (
+  // スマホ以下の場合
+  sp: "not screen and (min-width: 768px)",
+  // タブレット以下の場合
+  tb: "screen and (min-width: 768px) and (max-width: 1090px)",
+  // タブレット以上の場合
+  pc: "screen and (min-width: 768px)"
+) !default;
+
+// 重なり順の定義
+$layer: (
+  // ローディング
+  loading: 300,
+  // モーダル
+  modal: 100,
+  // ドロワー
+  drawer: 40,
+  // フローティング
+  floating: 30,
+  // ヘッダー
+  header: 20,
+  // フッター
+  footer: 10,
+  default: 1
+);

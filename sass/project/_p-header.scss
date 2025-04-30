@@ -1,0 +1,134 @@
+@use "../global" as global;
+
+.p-header__logo {
+  display: block;
+  width: global.rem(151px);
+
+  @include global.mq(pc) {
+    width: global.rem(187px);
+  }
+}
+.p-header__nav {
+  display: none;
+
+  @include global.mq(pc) {
+    display: block;
+    padding-left: global.rem(18px);
+  }
+}
+
+.p-header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: global.rem(15.5px);
+}
+
+.p-header__nav-item {
+  display: flex;
+  align-items: center;
+  gap: global.rem(15.5px);
+
+  &:not(:first-of-type) {
+    &::before {
+      content: "";
+      display: block;
+      width: global.rem(1px);
+      height: global.rem(33px);
+      background: global.$color-text-gray;
+    }
+  }
+
+  a {
+    display: block;
+    color: global.$color-text-gray;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+
+.p-header__tel {
+  display: none;
+
+  @include global.mq(pc) {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: global.rem(26px);
+  }
+}
+
+.p-header__tel-number {
+  display: flex;
+  align-items: center;
+  gap: global.rem(8px);
+}
+
+.p-header__tel-icon {
+  width: global.rem(16px);
+}
+
+.p-header__tel-link {
+  font-family: Lato;
+  font-size: global.rem(24px);
+  font-weight: 700;
+  line-height: normal;
+}
+
+.p-header__tel-time {
+  font-size: global.rem(12px);
+  line-height: normal;
+}
+
+.p-header__btns {
+  @include global.mq(pc) {
+    display: flex;
+    align-items: center;
+    gap: global.rem(8px);
+  }
+}
+
+.p-header__btn-document {
+  display: none;
+
+  @include global.mq(pc) {
+    display: flex;
+  }
+}
+
+.p-header__btn-entry {
+  margin-left: global.rem(24px);
+
+  @include global.mq(pc) {
+    margin-left: 0;
+  }
+}
+
+.p-header__drawer {
+  position: relative;
+  width: global.rem(27px);
+  height: global.rem(18px);
+
+  @include global.mq(pc) {
+    display: none;
+  }
+}
+
+.p-header__drawer-bar {
+  position: absolute;
+  display: block;
+  width: global.rem(27px);
+  height: global.rem(1.5px);
+  background: global.$color-text-black;
+  border-radius: global.rem(0.75px);
+
+  &:nth-child(1) {
+    top: 0px;
+  }
+  &:nth-child(2) {
+    top: global.rem(8px);
+  }
+  &:nth-child(3) {
+    top: global.rem(16px);
+  }
+}

@@ -1,0 +1,17 @@
+@use "../global" as global;
+
+html {
+  scroll-behavior: smooth;
+  font-size: global.vw-sp(global.$fz-base);
+
+  @include global.mq(pc) {
+    font-size: min(global.vw-pc(global.$fz-base), global.$fz-base);
+  }
+}
+
+body {
+  color: global.$color-text-black;
+  font-family: global.$ff-jp-sans;
+  font-weight: global.$fw-base;
+  line-height: global.$lh-base;
+}
