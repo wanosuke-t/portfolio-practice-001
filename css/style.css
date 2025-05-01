@@ -149,6 +149,14 @@ body {
 .c-inner {
   padding-inline: 0.9375rem;
 }
+@media screen and (min-width: 768px) {
+  .c-inner {
+    padding-inline: 1.875rem;
+    max-width: 65.75rem;
+    margin: 0 auto;
+  }
+}
+
 .c-btn-action {
   display: inline-block;
   background: #ff8b71;
@@ -810,6 +818,11 @@ body {
   padding-top: 2.4375rem;
   background: url("../img/trouble/trouble-bg-sp.png") no-repeat center center/cover;
 }
+@media screen and (min-width: 768px) {
+  .p-trouble {
+    padding-top: 5rem;
+  }
+}
 
 .p-trouble__title {
   margin-left: -0.5rem;
@@ -818,11 +831,30 @@ body {
   font-size: 1.5rem;
   line-height: normal;
 }
+@media screen and (min-width: 768px) {
+  .p-trouble__title {
+    margin-left: 0;
+    font-size: 2.5rem;
+    letter-spacing: 0.075rem;
+  }
+}
 
 .p-trouble__content {
   position: relative;
   margin-top: 3.125rem;
   padding-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .p-trouble__content {
+    margin-top: 1.5rem;
+    padding-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .p-trouble__image {
@@ -831,8 +863,21 @@ body {
   bottom: 0;
   left: -0.9375rem;
 }
+@media screen and (min-width: 768px) {
+  .p-trouble__image {
+    position: relative;
+    width: 367.908px;
+    bottom: auto;
+    left: auto;
+  }
+}
 .p-trouble__image img {
   width: 10.18375rem;
+}
+@media screen and (min-width: 768px) {
+  .p-trouble__image img {
+    width: 22.99425rem;
+  }
 }
 
 .p-trouble__boxes {
@@ -850,12 +895,18 @@ body {
           align-items: flex-end;
   gap: 1.1875rem;
 }
+@media screen and (min-width: 768px) {
+  .p-trouble__boxes {
+    gap: 1.8125rem;
+    margin-top: 1.9375rem;
+  }
+}
 
 .p-trouble__box {
   width: 15.5624375rem;
-  padding: 0.529625rem 0.355rem 0.529625rem 0.4375rem;
+  padding: 0.529625rem 0 0.529625rem 0.4375rem;
   border-radius: 0.5rem;
-  border: 0.395px solid #6c6e6f;
+  border: 0.0625rem solid #6c6e6f;
   background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -865,6 +916,15 @@ body {
           align-items: center;
   gap: 0.395rem;
 }
+@media screen and (min-width: 768px) {
+  .p-trouble__box {
+    width: 35rem;
+    padding: 24px 24px 24px 80px;
+    padding: 1.4375rem 0 1.4375rem 4.9375rem;
+    border-radius: 1rem;
+    gap: 1rem;
+  }
+}
 .p-trouble__box::before {
   content: "";
   display: block;
@@ -872,15 +932,34 @@ body {
   height: 0.625rem;
   background: url("../img/trouble/trouble-check-box.svg") no-repeat center center/contain;
 }
+@media screen and (min-width: 768px) {
+  .p-trouble__box::before {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
 .p-trouble__box:nth-of-type(3)::before {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin-top: 0.3125rem;
 }
+@media screen and (min-width: 768px) {
+  .p-trouble__box:nth-of-type(3)::before {
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin-top: 0;
+  }
+}
 
 .p-trouble__message {
   line-height: 1.3;
   letter-spacing: -0.03rem;
+}
+@media screen and (min-width: 768px) {
+  .p-trouble__message {
+    font-size: 1.5rem;
+    letter-spacing: 0.045rem;
+  }
 }
 
 .p-trouble__note {
@@ -892,21 +971,24 @@ body {
   padding-block: 1.0625rem;
   position: relative;
 }
-.p-trouble__note::after {
-  position: absolute;
-  content: "";
-  width: 2.875rem;
-  height: 1.625rem;
-  background: url("../img/trouble/trouble-triangle-sp.svg") no-repeat center center/contain;
-  left: 50%;
-  bottom: -1.5625rem;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+@media screen and (min-width: 768px) {
+  .p-trouble__note {
+    background: rgba(130, 191, 237, 0.4);
+    padding-block: 1.5625rem 2.0625rem;
+    font-size: 2rem;
+    line-height: 1.7;
+    letter-spacing: 0.06rem;
+  }
 }
 
 .p-trouble__char-comma {
   font-weight: inherit;
   letter-spacing: -0.584375rem;
+}
+@media screen and (min-width: 768px) {
+  .p-trouble__char-comma {
+    letter-spacing: inherit;
+  }
 }
 
 .u-hidden-sp {

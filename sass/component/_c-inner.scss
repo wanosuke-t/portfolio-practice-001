@@ -4,5 +4,8 @@
   padding-inline: global.rem(15px);
 
   @include global.mq(pc) {
+    padding-inline: global.rem(30px); ;
+    max-width: global.rem(calc(992px + 30px * 2));
+    margin: 0 auto;
   }
 }

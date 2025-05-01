@@ -4,6 +4,10 @@
   padding-top: global.rem(39px);
   background: url("../img/trouble/trouble-bg-sp.png") no-repeat center center /
     cover;
+
+  @include global.mq(pc) {
+    padding-top: global.rem(80px);
+  }
 }
 .p-trouble__inner {
 }
@@ -14,12 +18,25 @@
   font-family: global.$ff-jp-serif;
   font-size: global.rem(24px);
   line-height: normal;
+
+  @include global.mq(pc) {
+    margin-left: 0;
+    font-size: global.rem(40px);
+    letter-spacing: global.rem(1.2px);
+  }
 }
 
 .p-trouble__content {
   position: relative;
   margin-top: global.rem(50px);
   padding-bottom: global.rem(32px);
+
+  @include global.mq(pc) {
+    margin-top: global.rem(24px);
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .p-trouble__image {
@@ -28,8 +45,19 @@
   bottom: 0;
   left: global.rem(-15px);
 
+  @include global.mq(pc) {
+    position: relative;
+    width: 367.908px;
+    bottom: auto;
+    left: auto;
+  }
+
   img {
     width: global.rem(162.94px);
+
+    @include global.mq(pc) {
+      width: global.rem(367.908px);
+    }
   }
 }
 
@@ -40,18 +68,31 @@
   flex-direction: column;
   align-items: flex-end;
   gap: global.rem(19px);
+
+  @include global.mq(pc) {
+    gap: global.rem(29px);
+    margin-top: global.rem(31px);
+  }
 }
 
 .p-trouble__box {
   width: global.rem(248.999px);
-  padding: global.rem(8.474px) global.rem(5.68px) global.rem(8.474px)
+  padding: global.rem(8.474px) 0 global.rem(8.474px)
     global.rem(7px);
   border-radius: global.rem(8px);
-  border: 0.395px solid global.$color-text-gray;
+  border: global.rem(1px) solid global.$color-text-gray;
   background: global.$color-base-1;
   display: flex;
   align-items: center;
   gap: global.rem(6.32px);
+
+  @include global.mq(pc) {
+    width: global.rem(560px);
+    padding: 24px 24px 24px 80px;
+    padding: global.rem(23px) 0 global.rem(23px) global.rem(79px);
+    border-radius: global.rem(16px);
+    gap: global.rem(16px);
+  }
 
   &::before {
     content: "";
@@ -60,12 +101,22 @@
     height: global.rem(10px);
     background: url("../img/trouble/trouble-check-box.svg") no-repeat center
       center / contain;
+
+    @include global.mq(pc) {
+      width: global.rem(24px);
+      height: global.rem(24px);
+    }
   }
 
   &:nth-of-type(3) {
     &::before {
       align-self: flex-start;
       margin-top: global.rem(5px);
+
+      @include global.mq(pc) {
+        align-self: center;
+        margin-top: 0;
+      }
     }
   }
 }
@@ -73,6 +124,11 @@
 .p-trouble__message {
   line-height: 1.3;
   letter-spacing: global.rem(-0.48px);
+
+  @include global.mq(pc) {
+    font-size: global.rem(24px);
+    letter-spacing: global.rem(0.72px);
+  }
 }
 
 .p-trouble__note {
@@ -84,20 +140,40 @@
   padding-block: global.rem(17px);
   position: relative;
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: global.rem(46px);
-    height: global.rem(26px);
-    background: url("../img/trouble/trouble-triangle-sp.svg") no-repeat center
-      center / contain;
-    left: 50%;
-    bottom: global.rem(-25px);
-    transform: translateX(-50%);
+  @include global.mq(pc) {
+    background: transparentize(global.$color-accent-2, 0.6); // 60%透明にする
+    padding-block: global.rem(25px) global.rem(33px);
+    font-size: global.rem(32px);
+    line-height: 1.7;
+    letter-spacing: global.rem(0.96px);
   }
+
+  //   &::after {
+  //     position: absolute;
+  //     content: "";
+  //     width: global.rem(46px);
+  //     height: global.rem(26px);
+  //     background: url("../img/trouble/trouble-triangle-sp.svg") no-repeat center
+  //       center / contain;
+  //     left: 50%;
+  //     bottom: global.rem(-25px);
+  //     transform: translateX(-50%);
+
+  //     @include global.mq(pc) {
+  //       background: url("../img/trouble/trouble-triangle-pc.svg") no-repeat center
+  //         center / contain;
+  //       width: global.rem(90px);
+  //       height: global.rem(50px);
+  //       bottom: global.rem(-50px);
+  //     }
+  //   }
 }
 
 .p-trouble__char-comma {
   font-weight: inherit;
   letter-spacing: global.rem(-9.35px);
+
+  @include global.mq(pc) {
+    letter-spacing: inherit;
+  }
 }
