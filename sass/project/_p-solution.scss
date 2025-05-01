@@ -1,39 +1,61 @@
 @use "../global" as global;
 
 .p-solution {
-  padding-top: global.rem(64px);
+  // padding-top: global.rem(64px);
+  // position: relative;
+
+  // @include global.mq(pc) {
+  //   padding-top: global.rem(90px);
+  // }
+
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   display: block;
+  //   width: global.rem(45px);
+  //   height: global.rem(25px);
+  //   background: url("../img/solution/solution-triangle-sp.svg") no-repeat center
+  //     center / contain;
+  //   top: 0;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+
+  //   @include global.mq(pc) {
+  //     width: global.rem(90px);
+  //     height: global.rem(50px);
+  //     background: url("../img/solution/solution-triangle-pc.svg") no-repeat
+  //       center center / contain;
+  //   }
+  // }
+}
+
+.p-solution__top {
   padding-bottom: global.rem(38px);
-  position: relative;
 
   @include global.mq(pc) {
-    padding-top: global.rem(90px);
+    padding-bottom: 0;
   }
+}
 
-  &::before {
-    position: absolute;
-    content: "";
+.p-solution__top-inner {
+}
+
+.p-solution__triangle {
+  display: block;
+
+  img {
     display: block;
+    margin-inline: auto;
     width: global.rem(45px);
-    height: global.rem(25px);
-    background: url("../img/solution/solution-triangle-sp.svg") no-repeat center
-      center / contain;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
 
     @include global.mq(pc) {
       width: global.rem(90px);
-      height: global.rem(50px);
-      background: url("../img/solution/solution-triangle-pc.svg") no-repeat
-        center center / contain;
     }
   }
 }
 
-.p-solution__inner {
-}
-
 .p-solution__title {
+  margin-top: global.rem(40px);
 }
 
 .p-solution__title-wrapper {
@@ -103,5 +125,43 @@
     width: global.rem(236px);
     height: global.rem(236px);
     font-size: global.rem(24px);
+  }
+}
+
+.p-solution__bottom {
+  background: url("../img/solution/solution-bg-sp.jpg") no-repeat center center /
+    cover;
+  padding-top: global.rem(18px);
+  padding-bottom: global.rem(40px);
+
+  @include global.mq(pc) {
+    background: none;
+  }
+}
+
+.p-solution__bottom-inner {
+}
+
+.p-solution__question {
+}
+
+.p-solution__balloons {
+}
+
+.p-solution__balloon-content {
+}
+
+.p-solution__balloon-title {
+  &--highlight {
+  }
+}
+
+.p-solution__balloon-image {
+  img {
+  }
+}
+
+.p-solution__balloon-text {
+  span {
   }
 }
