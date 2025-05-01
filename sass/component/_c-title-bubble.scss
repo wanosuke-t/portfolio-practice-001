@@ -1,0 +1,48 @@
+@use "../global" as global;
+
+.c-title-bubble {
+  text-align: center;
+}
+
+.c-title-bubble__text {
+  font-family: global.$ff-jp-serif;
+  font-size: global.rem(24px);
+  line-height: normal;
+  display: inline-block;
+  position: relative;
+
+  @include global.mq(pc) {
+    font-size: global.rem(40px);
+    letter-spacing: global.rem(1.2px);
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: global.rem(24.922px);
+    height: global.rem(40px);
+    flex-shrink: 0;
+    top: 50%;
+
+    @include global.mq(pc) {
+      width: global.rem(33px);
+      height: global.rem(52.966px);
+    }
+  }
+
+  &::before {
+    background: url("../img/common/bubble-left.png") no-repeat center center /
+      contain;
+    left: global.rem(-8px);
+    transform: translate(-100%, -50%);
+  }
+
+  &::after {
+    background: url("../img/common/bubble-right.png") no-repeat center center /
+      contain;
+    right: global.rem(-8px);
+    transform: translate(100%, -50%);
+  }
+}

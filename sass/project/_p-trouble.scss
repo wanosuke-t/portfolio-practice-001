@@ -13,17 +13,17 @@
 }
 
 .p-trouble__title {
-  margin-left: global.rem(-8px);
-  text-align: center;
-  font-family: global.$ff-jp-serif;
-  font-size: global.rem(24px);
-  line-height: normal;
+  // margin-left: global.rem(-8px);
+  // text-align: center;
+  // font-family: global.$ff-jp-serif;
+  // font-size: global.rem(24px);
+  // line-height: normal;
 
-  @include global.mq(pc) {
-    margin-left: 0;
-    font-size: global.rem(40px);
-    letter-spacing: global.rem(1.2px);
-  }
+  // @include global.mq(pc) {
+  //   margin-left: 0;
+  //   font-size: global.rem(40px);
+  //   letter-spacing: global.rem(1.2px);
+  // }
 }
 
 .p-trouble__content {
@@ -77,8 +77,7 @@
 
 .p-trouble__box {
   width: global.rem(248.999px);
-  padding: global.rem(8.474px) 0 global.rem(8.474px)
-    global.rem(7px);
+  padding: global.rem(8.474px) 0 global.rem(8.474px) global.rem(7px);
   border-radius: global.rem(8px);
   border: global.rem(1px) solid global.$color-text-gray;
   background: global.$color-base-1;

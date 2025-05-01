@@ -1,0 +1,15 @@
+@use "../global" as global;
+
+.c-title-simple {
+  margin-left: global.rem(-8px);
+  text-align: center;
+  font-family: global.$ff-jp-serif;
+  font-size: global.rem(24px);
+  line-height: normal;
+
+  @include global.mq(pc) {
+    margin-left: 0;
+    font-size: global.rem(40px);
+    letter-spacing: global.rem(1.2px);
+  }
+}

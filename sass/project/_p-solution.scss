@@ -1,0 +1,107 @@
+@use "../global" as global;
+
+.p-solution {
+  padding-top: global.rem(64px);
+  padding-bottom: global.rem(38px);
+  position: relative;
+
+  @include global.mq(pc) {
+    padding-top: global.rem(90px);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: global.rem(45px);
+    height: global.rem(25px);
+    background: url("../img/solution/solution-triangle-sp.svg") no-repeat center
+      center / contain;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include global.mq(pc) {
+      width: global.rem(90px);
+      height: global.rem(50px);
+      background: url("../img/solution/solution-triangle-pc.svg") no-repeat
+        center center / contain;
+    }
+  }
+}
+
+.p-solution__inner {
+}
+
+.p-solution__title {
+}
+
+.p-solution__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include global.mq(pc) {
+    flex-direction: row;
+  }
+
+  & > span {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.p-solution__title-image {
+  width: global.rem(151px);
+  margin-right: global.rem(8px);
+
+  @include global.mq(pc) {
+    width: global.rem(187px);
+    margin-left: global.rem(8px);
+  }
+}
+
+.p-solution__lead {
+  text-align: center;
+  letter-spacing: global.rem(0.48px);
+
+  @include global.mq(pc) {
+    margin-top: -4px;
+    font-size: global.rem(24px);
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: global.rem(0.72px);
+  }
+}
+
+.p-solution__features {
+  margin-top: global.rem(30px);
+  display: flex;
+  justify-content: space-between;
+
+  @include global.mq(pc) {
+    margin-top: global.rem(80px);
+    width: global.rem(825px);
+    margin-inline: auto;
+  }
+}
+
+.p-solution__feature {
+  width: global.rem(118px);
+  height: global.rem(118px);
+  background: url("../img/solution/solution-circle.png") no-repeat center center /
+    contain;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: global.$color-text-white;
+  font-size: global.rem(13px);
+  font-weight: 700;
+  line-height: 1.5;
+
+  @include global.mq(pc) {
+    width: global.rem(236px);
+    height: global.rem(236px);
+    font-size: global.rem(24px);
+  }
+}
