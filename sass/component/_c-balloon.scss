@@ -1,15 +1,51 @@
 @use "../global" as global;
 
 .c-balloon {
+  display: flex;
+  gap: global.rem(17.5px);
+
   &--reverse {
+    flex-direction: row-reverse;
+
+    .c-balloon__text {
+      &::before {
+        background: url("../img/common/triangle-right.svg") no-repeat center
+          center / contain;
+        left: auto;
+        right: global.rem(-12px);
+      }
+    }
   }
 }
 
 .c-balloon__icon {
+  flex-shrink: 0;
+  width: global.rem(50px);
 }
 
 .c-balloon__text {
+  width: global.rem(271px);
+  padding: global.rem(16px);
+  border-radius: global.rem(24px);
+  background: global.$color-base-1;
+  box-shadow: 0px 0px 4px 0px rgba(0, 29, 104, 0.25);
+  font-size: global.rem(15px);
+  letter-spacing: global.rem(-0.15px);
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: global.rem(17px);
+    height: global.rem(32px);
+    background: url("../img/common/triangle-left.svg") no-repeat center center /
+      contain;
+    top: global.rem(23px);
+    left: global.rem(-12px);
+  }
 }
 
 .c-balloon__highlight {
+  font-weight: 700;
+  background: global.$color-accent-3;
 }

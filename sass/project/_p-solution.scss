@@ -129,7 +129,7 @@
 }
 
 .p-solution__bottom {
-  background: url("../img/solution/solution-bg-sp.jpg") no-repeat center center /
+  background: url("../img/solution/solution-bg-sp.jpg") no-repeat top center /
     cover;
   padding-top: global.rem(18px);
   padding-bottom: global.rem(40px);
@@ -146,26 +146,33 @@
 }
 
 .p-solution__balloons {
+  margin-top: global.rem(42px);
+  display: flex;
+  flex-direction: column;
+  gap: global.rem(16px);
 }
 
-.p-solution__balloon-content {
+.p-solution__box {
 }
 
-.p-solution__balloon-title {
+.p-solution__box-content {
+}
+
+.p-solution__box-title {
   &--highlight {
   }
 }
 
-.p-solution__balloon-image {
+.p-solution__box-image {
   img {
   }
 }
 
-.p-solution__balloon-text {
+.p-solution__box-text {
   span {
   }
 }
 
-.p-solution__balloon-note {
-  
+.p-solution__box-note {
+
 }
