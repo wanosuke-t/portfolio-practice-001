@@ -137,27 +137,33 @@
 		<section class="p-trouble">
 			<div class="p-trouble__inner c-inner">
 
-				<h2 class="p-trouble__title">こんなお悩みありませんか</h2>
+				<h2 class="p-trouble__title">こんなお悩みありませんか?</h2>
 
 				<div class="p-trouble__content">
-					<div class="p-trouble__image">
-						<img src="path/to/image.jpg" alt="悩んでいる人のイメージ">
-					</div>
+
+					<picture class="p-trouble__image">
+						<source media="(min-width: 768px)" srcset="./img/trouble/trouble-person-pc.png">
+						<img src="./img/trouble/trouble-person-sp.png" alt="悩んでいる人のイメージ" width="736" height="734">
+					</picture>
 
 					<div class="p-trouble__boxes">
 						<div class="p-trouble__box">
-							<p class="p-trouble__message">お悩みメッセージ1</p>
+							<p class="p-trouble__message">手軽に健康を手に入れたい</p>
 						</div>
 						<div class="p-trouble__box">
-							<p class="p-trouble__message">お悩みメッセージ2</p>
+							<p class="p-trouble__message">そろそろお水にもこだわりたい</p>
 						</div>
 						<div class="p-trouble__box">
-							<p class="p-trouble__message">お悩みメッセージ3</p>
+							<p class="p-trouble__message">腸活何からしたら良いか<br class="u-hidden-pc">わからない</p>
 						</div>
 					</div>
 				</div>
 
 			</div><!-- p-trouble__inner -->
+
+			<p class="p-trouble__note">それに<span class="p-trouble__char-comma">、</span>活性酸素が増えると<span
+					class="p-trouble__char-comma">、</span>様々な影響が…</p>
+
 		</section><!-- p-trouble -->
 
 
