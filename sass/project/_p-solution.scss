@@ -1,6 +1,10 @@
 @use "../global" as global;
 
 .p-solution {
+  @include global.mq(pc) {
+    background: url("../img/solution/solution-bg-pc.jpg") no-repeat top center /
+      cover;
+  }
 }
 
 .p-solution__top {
@@ -29,7 +33,7 @@
 }
 
 .p-solution__title {
-  margin-top: global.rem(40px);
+  margin-top: global.rem(39px);
 }
 
 .p-solution__title-wrapper {
@@ -105,11 +109,13 @@
 .p-solution__bottom {
   background: url("../img/solution/solution-bg-sp.jpg") no-repeat top center /
     cover;
-  padding-top: global.rem(17px);
-  padding-bottom: global.rem(40px);
+  padding-top: global.rem(16px);
+  padding-bottom: global.rem(39px);
 
   @include global.mq(pc) {
     background: none;
+    padding-top: 0;
+    padding-bottom: global.rem(82px);
   }
 }
 
@@ -118,7 +124,8 @@
 
 .p-solution__box {
   @include global.mq(pc) {
-    padding: global.rem(40px) global.rem(32px);
+    margin-top: global.rem(80px);
+    padding: global.rem(40px) global.rem(37px);
     border-radius: global.rem(40px);
     background: global.$color-base-1;
     box-shadow: 0px 4px 4px 0px rgba(180, 221, 232, 0.25);
@@ -126,13 +133,22 @@
 }
 
 .p-solution__question {
+  @include global.mq(pc) {
+    font-size: global.rem(32px);
+    line-height: 1.7;
+    letter-spacing: global.rem(0.96px);
+  }
 }
 
 .p-solution__balloons {
-  margin-top: global.rem(42px);
+  margin-top: global.rem(41px);
   display: flex;
   flex-direction: column;
   gap: global.rem(16px);
+
+  @include global.mq(pc) {
+    margin-top: global.rem(45px);
+  }
 }
 
 .p-solution__balloon {
@@ -140,12 +156,23 @@
   background: var(--White, #fff);
   box-shadow: 0px 0px 2.163px 0px rgba(0, 29, 104, 0.25);
   padding: global.rem(20px) global.rem(6px) global.rem(3px);
+
+  @include global.mq(pc) {
+    max-width: global.rem(810px);
+    margin-inline: auto;
+    padding: global.rem(34px) global.rem(69px) global.rem(16px);
+  }
 }
 
 .p-solution__balloon-list {
   display: grid;
   grid-template-columns: 1fr global.rem(115px) 1fr;
   gap: global.rem(6px);
+
+  @include global.mq(pc) {
+    gap: global.rem(30px);
+    grid-template-columns: 1fr global.rem(220px) 1fr;
+  }
 }
 
 .p-solution__balloon-item {
@@ -161,6 +188,10 @@
 
     .p-solution__balloon-text {
       margin-top: global.rem(7px);
+
+      @include global.mq(pc) {
+        margin-top: global.rem(15px);
+      }
     }
   }
 }
@@ -172,16 +203,30 @@
   border-radius: global.rem(17.304px);
   background: global.$color-accent-3;
   padding: global.rem(4px) global.rem(12px);
+
+  @include global.mq(pc) {
+    font-size: global.rem(24px);
+    letter-spacing: global.rem(0.72px);
+    border-radius: global.rem(32px);
+    padding: global.rem(8px) global.rem(23.5px);
+  }
 }
 
 .p-solution__balloon-image {
   display: flex;
   align-items: flex-end;
-  margin-top: global.rem(16px);
-  height: global.rem(108px);
+  height: global.rem(123px);
+
+  @include global.mq(pc) {
+    height: global.rem(248px);
+  }
 
   img {
     width: global.rem(110px);
+
+    @include global.mq(pc) {
+      width: global.rem(196px);
+    }
   }
 }
 
@@ -190,6 +235,11 @@
   text-align: center;
   font-size: global.rem(12px);
   line-height: normal;
+
+  @include global.mq(pc) {
+    font-size: global.rem(16px);
+    line-height: normal;
+  }
 }
 
 .p-solution__balloon-note {
@@ -198,4 +248,11 @@
   line-height: normal;
   text-align: right;
   margin-right: global.rem(11px);
+
+  @include global.mq(pc) {
+    margin-top: 0;
+    font-size: 10px;
+    font-size: global.rem(10px);
+    margin-right: global.rem(-61px);
+  }
 }

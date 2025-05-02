@@ -4,57 +4,48 @@
   display: flex;
   gap: global.rem(7px);
 
-  &--reverse {
-    flex-direction: row-reverse;
+  @include global.mq(pc) {
+    align-items: center;
+    gap: global.rem(24px);
+  }
 
-    .c-balloon__text {
-      &::before {
-        background: url("../img/common/triangle-right.svg") no-repeat center
-          center / contain;
-        left: auto;
-        right: global.rem(-12px);
-      }
+  .c-balloon__icon {
+    flex-shrink: 0;
+    width: global.rem(50px);
+
+    @include global.mq(pc) {
+      width: global.rem(90px);
     }
   }
 
-  &--w294 {
-    gap: global.rem(14px);
+  .c-balloon__body {
+    position: relative;
+    filter: drop-shadow(0px 0px 4px rgba(0, 29, 104, 0.25));
+  }
 
-    .c-balloon__text {
-      width: global.rem(294px);
+  .c-balloon__text {
+    width: global.rem(287px);
+    padding: global.rem(16px) global.rem(16px);
+    border-radius: global.rem(24px);
+    background: global.$color-base-1;
+    font-size: global.rem(15px);
+    letter-spacing: global.rem(-0.15px);
+    line-height: 1.74;
+    text-align: justify;
+    position: relative;
+    z-index: 2;
+
+    @include global.mq(pc) {
+      width: auto;
+      max-width: global.rem(734px);
+      font-size: global.rem(20px);
+      line-height: 1.7;
+      letter-spacing: global.rem(0.6px);
     }
   }
 
-  &--w271 {
-    gap: global.rem(17.5px);
-
-    .c-balloon__text {
-      width: global.rem(271px);
-    }
-  }
-}
-
-.c-balloon__icon {
-  flex-shrink: 0;
-  width: global.rem(50px);
-}
-
-.c-balloon__text {
-  width: global.rem(287px);
-  padding: global.rem(16px) global.rem(16px);
-  border-radius: global.rem(24px);
-  background: global.$color-base-1;
-  box-shadow: 0px 0px 4px 0px rgba(0, 29, 104, 0.25);
-  font-size: global.rem(15px);
-  letter-spacing: global.rem(-0.15px);
-  line-height: 1.73;
-  text-align: justify;
-
-  position: relative;
-
-  &::before {
+  .c-balloon__tail {
     position: absolute;
-    content: "";
     width: global.rem(17px);
     height: global.rem(32px);
     background: url("../img/common/triangle-left.svg") no-repeat center center /
@@ -62,9 +53,59 @@
     top: global.rem(12px);
     left: global.rem(-12px);
   }
-}
 
-.c-balloon__highlight {
-  font-weight: 700;
-  background: global.$color-accent-3;
+  .c-balloon__highlight {
+    font-weight: 700;
+    background: global.$color-accent-3;
+  }
+
+  &--w294 {
+    gap: global.rem(14px);
+
+    @include global.mq(pc) {
+      gap: global.rem(24px);
+
+    }
+
+    .c-balloon__icon {
+      align-self: flex-start;
+    }
+
+    .c-balloon__text {
+      width: global.rem(294px);
+
+      @include global.mq(pc) {
+        width: auto;
+      }
+    }
+  }
+
+  &--w271 {
+    gap: global.rem(17.5px);
+
+    @include global.mq(pc) {
+      gap: global.rem(24px);
+
+    }
+
+    .c-balloon__text {
+      width: global.rem(271px);
+
+      @include global.mq(pc) {
+        width: auto;
+      }
+    }
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+
+    .c-balloon__tail {
+      background: url("../img/common/triangle-right.svg") no-repeat center
+        center / contain;
+      top: global.rem(12px);
+      left: auto;
+      right: global.rem(-12px);
+    }
+  }
 }
