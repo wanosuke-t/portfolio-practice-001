@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -1443,6 +1444,93 @@ body {
     font-size: 0.625rem;
     margin-right: -3.8125rem;
   }
+}
+
+.p-point {
+  padding-top: 3.4375rem;
+  padding-bottom: 3.3125rem;
+}
+
+.p-point__list {
+  margin-top: 1.4375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.75rem;
+}
+
+.p-point__label {
+  margin-left: -0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .p-point__label--sp {
+    display: none;
+  }
+}
+.p-point__label--pc {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .p-point__label--pc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.p-point__label-tag {
+  z-index: 2;
+  background: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.p-point__label-num {
+  margin-left: -1.5625rem;
+  color: #82bfed;
+  font-family: "Lato", sans-serif;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.p-point__image {
+  margin-top: -0.125rem;
+}
+
+.p-point__lead {
+  margin-top: 1.5rem;
+  color: #2273ae;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.p-point__text {
+  margin-top: 1rem;
+  text-align: justify;
+  font-size: 1rem;
+  letter-spacing: 0.03rem;
+  overflow-wrap: anywhere; /* 収まらない場合に折り返す */
+  word-break: normal; /* 単語の分割はデフォルトに依存 */
+  line-break: strict; /* 禁則処理を厳格に適用 */
+}
+
+.p-point__note {
+  color: #6c6e6f;
 }
 
 .u-hidden-sp {

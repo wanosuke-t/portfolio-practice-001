@@ -1,0 +1,90 @@
+@use "../global" as global;
+
+.p-point {
+  padding-top: global.rem(55px);
+  padding-bottom: global.rem(53px);
+}
+
+.p-point__inner {
+}
+
+.p-point__title {
+}
+
+.p-point__list {
+  margin-top: global.rem(23px);
+  display: flex;
+  flex-direction: column;
+  gap: global.rem(44px);
+}
+
+.p-point__item {
+}
+
+.p-point__label {
+  margin-left: global.rem(-4px);
+  display: flex;
+  align-items: center;
+
+  &--sp {
+    @include global.mq(pc) {
+      display: none;
+    }
+  }
+
+  &--pc {
+    display: none;
+
+    @include global.mq(pc) {
+      display: flex;
+    }
+  }
+}
+
+.p-point__label-tag {
+  z-index: 2;
+  background: global.$color-base-1;
+  font-family: global.$ff-en-sans;
+  font-size: global.rem(16px);
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.p-point__label-num {
+  margin-left: global.rem(-25px);
+  color: global.$color-accent-2;
+  font-family: global.$ff-en-sans;
+  font-size: global.rem(64px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.p-point__image {
+  margin-top: global.rem(-2px);
+}
+
+.p-point__content {
+}
+
+.p-point__lead {
+  margin-top: global.rem(24px);
+  color: #2273ae;
+  font-size: global.rem(20px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.p-point__text {
+  margin-top: global.rem(16px);
+  text-align: justify;
+  font-size: global.rem(16px);
+  letter-spacing: global.rem(0.48px);
+  overflow-wrap: anywhere; /* 収まらない場合に折り返す */
+  word-break: normal; /* 単語の分割はデフォルトに依存 */
+  line-break: strict; /* 禁則処理を厳格に適用 */
+}
+
+.p-point__note {
+  color: global.$color-text-gray;
+}
