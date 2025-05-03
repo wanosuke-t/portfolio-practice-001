@@ -1439,7 +1439,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .p-solution__balloon-note {
-    margin-top: 0;
+    margin-top: 0.125rem;
     font-size: 10px;
     font-size: 0.625rem;
     margin-right: -3.8125rem;
@@ -1449,6 +1449,18 @@ body {
 .p-point {
   padding-top: 3.4375rem;
   padding-bottom: 3.3125rem;
+}
+@media screen and (min-width: 768px) {
+  .p-point {
+    padding-top: 5rem;
+    padding-bottom: 5.625rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p-point__title {
+    margin-left: 1.1875rem;
+  }
 }
 
 .p-point__list {
@@ -1461,6 +1473,45 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2.75rem;
+}
+@media screen and (min-width: 768px) {
+  .p-point__list {
+    margin-top: 2.5rem;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p-point__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2rem;
+  }
+  .p-point__item--reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .p-point__item:nth-of-type(2) {
+    height: 17.75rem;
+  }
+  .p-point__item:nth-of-type(2) .p-point__image {
+    width: 15.9375rem;
+  }
+  .p-point__item:nth-of-type(3) .p-point__text {
+    width: 39.375rem;
+  }
+  .p-point__item:nth-of-type(4) .p-point__lead {
+    margin-top: 0.75rem;
+  }
 }
 
 .p-point__label {
@@ -1510,6 +1561,21 @@ body {
 .p-point__image {
   margin-top: -0.125rem;
 }
+@media screen and (min-width: 768px) {
+  .p-point__image {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 19.375rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p-point__content {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 40.625rem;
+  }
+}
 
 .p-point__lead {
   margin-top: 1.5rem;
@@ -1517,6 +1583,14 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.2;
+}
+@media screen and (min-width: 768px) {
+  .p-point__lead {
+    margin-top: 0.375rem;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    letter-spacing: 0.045rem;
+  }
 }
 
 .p-point__text {
@@ -1527,6 +1601,13 @@ body {
   overflow-wrap: anywhere; /* 収まらない場合に折り返す */
   word-break: normal; /* 単語の分割はデフォルトに依存 */
   line-break: strict; /* 禁則処理を厳格に適用 */
+}
+@media screen and (min-width: 768px) {
+  .p-point__text {
+    margin-top: 1.5rem;
+    font-size: 1.125rem;
+    letter-spacing: 0.03375rem;
+  }
 }
 
 .p-point__note {

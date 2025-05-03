@@ -3,12 +3,20 @@
 .p-point {
   padding-top: global.rem(55px);
   padding-bottom: global.rem(53px);
+
+  @include global.mq(pc) {
+    padding-top: global.rem(80px);
+    padding-bottom: global.rem(90px);
+  }
 }
 
 .p-point__inner {
 }
 
 .p-point__title {
+  @include global.mq(pc) {
+    margin-left: global.rem(19px);
+  }
 }
 
 .p-point__list {
@@ -16,9 +24,44 @@
   display: flex;
   flex-direction: column;
   gap: global.rem(44px);
+
+  @include global.mq(pc) {
+    margin-top: global.rem(40px);
+    gap: global.rem(32px);
+  }
 }
 
 .p-point__item {
+  @include global.mq(pc) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: global.rem(32px);
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-of-type(2) {
+      height: global.rem(284px);
+
+      .p-point__image {
+        width: global.rem(255px);
+      }
+    }
+
+    &:nth-of-type(3) {
+     .p-point__text {
+      width: global.rem(630px);
+      }
+    }
+
+    &:nth-of-type(4) {
+      .p-point__lead {
+        margin-top: global.rem(12px);
+      }
+    }
+  }
 }
 
 .p-point__label {
@@ -62,9 +105,18 @@
 
 .p-point__image {
   margin-top: global.rem(-2px);
+
+  @include global.mq(pc) {
+    flex-shrink: 0;
+    width: global.rem(310px);
+  }
 }
 
 .p-point__content {
+  @include global.mq(pc) {
+    flex-shrink: 0;
+    width: global.rem(650px);
+  }
 }
 
 .p-point__lead {
@@ -73,6 +125,13 @@
   font-size: global.rem(20px);
   font-weight: 700;
   line-height: 1.2;
+
+  @include global.mq(pc) {
+    margin-top: global.rem(6px);
+    font-size: global.rem(24px);
+    line-height: 1.7;
+    letter-spacing: global.rem(0.72px);
+  }
 }
 
 .p-point__text {
@@ -83,6 +142,12 @@
   overflow-wrap: anywhere; /* 収まらない場合に折り返す */
   word-break: normal; /* 単語の分割はデフォルトに依存 */
   line-break: strict; /* 禁則処理を厳格に適用 */
+
+  @include global.mq(pc) {
+    margin-top: global.rem(24px);
+    font-size: global.rem(18px);
+    letter-spacing: global.rem(0.54px);
+  }
 }
 
 .p-point__note {

@@ -250,7 +250,7 @@
   margin-right: global.rem(11px);
 
   @include global.mq(pc) {
-    margin-top: 0;
+    margin-top: global.rem(2px);
     font-size: 10px;
     font-size: global.rem(10px);
     margin-right: global.rem(-61px);
