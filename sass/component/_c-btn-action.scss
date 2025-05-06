@@ -1,13 +1,12 @@
 @use "../global" as global;
 
 .c-btn-action {
-  display: inline-block;
   background: global.$color-accent-1;
   box-shadow: 0 0 global.rem(3px) 0 rgba(83, 46, 37, 0.25);
   color: global.$color-text-white;
   font-weight: 700;
   line-height: normal;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease;
@@ -101,6 +100,38 @@
           center / contain;
         margin-left: global.rem(11.8px);
       }
+    }
+  }
+
+  &--cta {
+    width: global.rem(300px);
+    height: global.rem(56px);
+    font-size: global.rem(22px);
+    border-radius: global.rem(32px);
+
+    @include global.mq(pc) {
+      width: global.rem(400px);
+      height: global.rem(88px);
+      font-size: global.rem(30px);
+      border-radius: global.rem(52.404px);
+    }
+
+    span {
+      font-size: global.rem(20px);
+
+      @include global.mq(pc) {
+        font-size: global.rem(28.073px);
+      }
+    }
+
+    &:after {
+      content: "";
+      display: inline-block;
+      width: global.rem(20.587px);
+      height: global.rem(20.587px);
+      background: url("../img/common/btn-arrow-pc.svg") no-repeat center center /
+        contain;
+      margin-left: global.rem(8px);
     }
   }
 }
