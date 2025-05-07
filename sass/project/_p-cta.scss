@@ -29,11 +29,11 @@
 
 .p-cta__bg {
   background: global.$color-accent-3;
-  padding-top: global.rem(56.5px);
+  padding-top: global.rem(57px);
   padding-bottom: global.rem(120px);
 
   @include global.mq(pc) {
-    padding-top: global.rem(34.5px);
+    padding-top: global.rem(37px);
     padding-bottom: global.rem(94px);
   }
 }
@@ -52,6 +52,20 @@
 
   @include global.mq(pc) {
     font-size: global.rem(32px);
+    line-height: 1.7;
+    letter-spacing: global.rem(0.96px);
+  }
+
+  &::before {
+    @include global.mq(pc) {
+      left: global.rem(-14px);
+    }
+  }
+
+  &::after {
+    @include global.mq(pc) {
+      right: global.rem(-14px);
+    }
   }
 }
 
@@ -60,11 +74,11 @@
 }
 
 .p-cta__buttons {
-  margin-top: global.rem(64.5px);
+  margin-top: global.rem(60px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: global.rem(48px);
+  gap: global.rem(47px);
 
   @include global.mq(pc) {
     margin-top: global.rem(41.5px);
@@ -75,6 +89,22 @@
 
 .p-cta__button-group {
   text-align: center;
+
+  &:nth-of-type(1) {
+    .p-cta__label {
+      @include global.mq(pc) {
+        margin-left: global.rem(6px);
+      }
+    }
+  }
+
+  &:nth-of-type(2) {
+    @include global.mq(pc) {
+      .p-cta__label {
+        margin-left: global.rem(-17px);
+      }
+    }
+  }
 }
 
 .p-cta__label {
@@ -89,6 +119,7 @@
     font-size: global.rem(24px);
     line-height: 1.7;
     letter-spacing: global.rem(0.72px);
+    margin-top: global.rem(0px);
   }
 
   &::before,
@@ -119,7 +150,7 @@
   margin-top: global.rem(8px);
 
   @include global.mq(pc) {
-    margin-top: global.rem(12px);
+    margin-top: global.rem(11px);
   }
 }
 

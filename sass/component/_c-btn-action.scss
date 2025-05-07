@@ -108,6 +108,8 @@
     height: global.rem(56px);
     font-size: global.rem(22px);
     border-radius: global.rem(32px);
+    padding-bottom: global.rem(1px);
+    padding-left: global.rem(12px);
 
     @include global.mq(pc) {
       width: global.rem(400px);
